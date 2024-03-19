@@ -1,26 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react'
+import ClassComponent from './ClassComponent'
+import ArrowComponent from './ArrowComponents'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <ul>
+    <ClassComponent href='https://www.google.com' text='Google'/>
+    <ArrowComponent href='https://www.naver.com' text='Naver'/>
+  </ul>)
 }
-
-export default App;
