@@ -1,11 +1,9 @@
-import { Component } from 'react'
-import ClassComponent from './ClassComponent'
-import ArrowComponent from './ArrowComponents'
+import P from './P'; // assuming P is a component defined in a file named P.tsx in the same directory
+
 
 export default function App() {
-  return (
-  <ul>
-    <ClassComponent href='https://www.google.com' text='Google'/>
-    <ArrowComponent href='https://www.naver.com' text='Naver'/>
-  </ul>)
+  const texts = ['승현이', '앙농'].map((text, index) => 
+    <P key={index}>{text}</P>
+  )
+  return <div children={texts} />
 }
